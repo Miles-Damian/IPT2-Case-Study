@@ -397,6 +397,19 @@ transform:translate(0, 10px) rotate(45deg);
 opacity: 0;
 }
 }
+/* MOUSE TRAIL */
+.star {
+    transform-style: preserve-3d;
+    position: absolute;
+    z-index: 1000; /* Ensure stars appear above other content */
+}
+.star:before {
+    content: '\2726'; /* Unicode star symbol */
+    color: inherit;
+    filter: drop-shadow(0 0 0.5em white);
+    text-shadow: 0 0 0.8em #fff5;
+}
+/* MOUSE TRAIL */
 /* About Section */
 #about {
     padding: 80px 0;
