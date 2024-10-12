@@ -409,7 +409,37 @@ opacity: 0;
     filter: drop-shadow(0 0 0.5em white);
     text-shadow: 0 0 0.8em #fff5;
 }
-/* MOUSE TRAIL */
+
+/* Mute/Unmute Button */
+#muteButton {
+    position: absolute;
+    top: 50px;
+    left: 95%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    border: none;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+    transition: opacity 0.4s ease-out;
+    opacity: 0.8;
+}
+
+#muteButton img {
+    width: 80%;
+    height: 80%;
+    transition: transform 0.3s ease;
+}
+
+#muteButton:hover {
+    opacity: 0.8;
+}
+
+#muteButton.fade {
+    opacity: 0.2;
+}
+
 /* About Section */
 #about {
     padding: 80px 0;

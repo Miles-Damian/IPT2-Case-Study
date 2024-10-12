@@ -81,3 +81,24 @@ addEventListener("mousemove", (e) => {
     }
 });
 // MOUSE TRAIL
+
+// MUTE/UNMUTE BUTTON
+document.addEventListener('DOMContentLoaded', function() {
+	var audio = document.getElementById('bgAudio');
+	var muteButton = document.getElementById('muteButton');
+	// DEFAULT VOLUME  
+	audio.volume = 0.3;
+
+	function toggleMute() {
+		if (audio.volume === 0) {
+			// Unmute
+			audio.volume = 0.3; // Set the volume to your desired level
+		} else {
+			// Mute
+			audio.volume = 0;
+		}
+		muteButton.classList.toggle('fade');
+	}
+
+	muteButton.onclick = toggleMute;
+});
